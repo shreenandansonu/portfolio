@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
 .land_page {
     background-image: url('images/bg\ 1.png');
     background-size: cover;
@@ -8,21 +15,47 @@
 .navbar {
     background-color: transparent;
     height: 80px;
-    padding:0px 25px;
+    padding: 25px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    vertical-align: middle;
 }
 
-.navbar-brand {
-    color: #ffffff;
-    font-weight: bold;
+.navbar-logo {
+    height: 30px;
 }
 
-.navbar-nav .nav-link {
-    color: #ffffff;
+.menu {
+    display: flex;
+    vertical-align:baseline;
+
 }
 
-#get_in_touch,#get_in_touch>a{
-    background-color: #FF0066;
-    text-align: center;
+.links-container {
+    display: flex;
+    padding: 10px;
+}
+
+.nav-link>a {
     color: #ffffff;
     text-decoration: none;
+    background-color: #FF0066;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.links {
+    padding: 0px 5px;
+    list-style: none;
+}
+
+.linker {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.linker:hover {
+    color: #FF0066;
+    text-decoration: underline;
 }
