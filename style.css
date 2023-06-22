@@ -7,39 +7,22 @@
 
 .navbar {
     background-color: transparent;
+    height: 80px;
+    padding:0px 25px;
 }
 
 .navbar-brand {
-    color: #fff;
+    color: #ffffff;
     font-weight: bold;
 }
 
 .navbar-nav .nav-link {
-    color: #fff;
+    color: #ffffff;
 }
 
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#get_in_touch,#get_in_touch>a{
+    background-color: #FF0066;
     text-align: center;
-}
-
-.profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-.profile-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.button-container {
-    margin-top: 30px;
+    color: #ffffff;
+    text-decoration: none;
 }
