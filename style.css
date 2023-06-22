@@ -40,6 +40,7 @@ body {
 .nav-link>a {
     color: #ffffff;
     text-decoration: none;
+    display: inline-block;
     background-color: #FF0066;
     text-decoration: none;
     padding: 5px;
