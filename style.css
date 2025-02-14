@@ -15,6 +15,8 @@ nav{
     background-color: black;
     padding: 0px 20px;
     margin: 0%;
+    border-bottom: solid 5px;
+    border-color: rgb(255, 120, 0);
 }
 a{
     color: antiquewhite;
