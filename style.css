@@ -74,11 +74,7 @@ a{
     
     #heroimg{
         width: 100%;
-    }
-
-    #heroimg {
-      height: auto; /* Adjust height for smaller screens */
-      padding: 20px; /* Adds some spacing */
+        padding: 20px;
     }
   
     #heroimg img {
