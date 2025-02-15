@@ -50,6 +50,7 @@ a {
     justify-content: center; /* Removed unnecessary properties */
     font-size: xx-large;
     border-right: solid 5px;
+    text-align: center;
 }
 
 #heroimg {
