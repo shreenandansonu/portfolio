@@ -40,6 +40,8 @@ a {
     border-bottom: solid 5px;
     padding: 0;
     overflow: hidden;
+    align-items: center;
+    align-content: center;
 }
 
 #herotext {
