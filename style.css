@@ -74,14 +74,14 @@ a {
     }
 
     #herotext {
-        width: 100%;
+        width: 90%;
         border: none;
         padding: 10px; /* Added padding for better readability */
         text-align: center;
     }
 
     #heroimg {
-        width: 100%;
+        width: 90%;
         padding: 20px;
     }
 
