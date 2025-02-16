@@ -40,8 +40,6 @@ a {
     border-bottom: solid 5px;
     padding: 0;
     overflow: hidden;
-    align-items: center;
-    align-content: center;
 }
 
 #herotext {
@@ -53,6 +51,7 @@ a {
     font-size: xx-large;
     border-right: solid 5px;
     text-align: center;
+    background-color: rgb(0, 217, 255);
 }
 
 #heroimg {
