@@ -21,6 +21,7 @@ body {
 }
 
 #navbar {
+    position: sticky;
   color: var(--flame);
   padding: 1rem;
   display: flex;
@@ -44,7 +45,7 @@ i{
 
 
 #herocontent{
-    margin: ;
+    background-image: ;
     display: flex;
     flex-direction: row;
     align-items: center;
