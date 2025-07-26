@@ -21,21 +21,16 @@ body {
 }
 
 #navbar {
-    height: 10vh;
-  position: fixed;
-  color: var(--flame);
-  padding: 1rem;
   display: flex;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 25px 25px;
-  
+  padding: 10px 20px; /* Adjust padding as needed */
 }
 i{
     color: var(--flame);
 }
+
+
 
 
 #navbar a {
@@ -46,7 +41,7 @@ i{
 }
 
 #hero {
-    height: 100vh;
+    height: 90vh;
     align-content: center;
 }
 
