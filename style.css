@@ -40,3 +40,19 @@ i{
   margin-left: 1rem;
   font-weight: 500;
 }
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: row;
+    align-items:center;
+  }
+
+  #navbar .nav-links {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  #navbar a {
+    margin: 0.5rem 0;
+  }
+}
