@@ -77,7 +77,7 @@ i{
 
   #herocontent{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   #right{
     margin: 10% ;
