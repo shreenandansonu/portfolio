@@ -40,6 +40,24 @@ i{
   margin-left: 1rem;
   font-weight: 500;
 }
+
+
+
+#herocontent{
+    margin: ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+#herocontent img{
+    padding: 0%;
+    margin: 0%;
+    overflow: hidden;
+}
+
+
+
 @media (max-width: 768px) {
   #navbar {
     flex-direction: row;
@@ -55,5 +73,13 @@ i{
 
   #navbar a {
     margin: 0.5rem 0;
+  }
+
+  #herocontent{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #right{
+    margin: 10% ;
   }
 }
