@@ -54,11 +54,29 @@ i{
 #herocontent img{
     width: 100%;
 }
+#left{
+    justify-items: center;
+}
+#left h1{
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    color: var(--floral-white);
+}
+#left h2{
+    font-weight: bolder;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    color: var(--floral-white);
+}
 
 
 
 @media (max-width: 768px) {
   #navbar {
+
     flex-direction: row;
     align-items:center;
     padding: 10px 10px;
