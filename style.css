@@ -198,10 +198,11 @@ ul {
 }
 
 #projectcard button {
+  border: solid black 0px;
   background-color: var(--flame);
-  padding: 7px 15px;
+  padding: 10px 15px;
   color: var(--floral-white);
-  border-radius: 0px 0px 10px 0px;
+  border-radius: 10px 0px 10px 0px;
 }
 
 #projectcard p {
