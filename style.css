@@ -34,6 +34,10 @@ body {
   border-bottom: 2px solid var(--floral-white);
 }
 
+#navbar h1{
+  font-size: xx-large;
+  font-weight:normal;
+}
 i {
   color: var(--flame);
 }
