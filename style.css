@@ -18,19 +18,26 @@ body {
   font-family: 'Oswald', sans-serif;
   background-color: var(--eerie-black);
   color: var(--flame);
+  font-size: 16px;
 }
 
 #navbar {
+  background-color: var(--eerie-black);
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px; /* Adjust padding as needed */
-}
-i{
-    color: var(--flame);
+  padding: 10px 20px;
+  /* Adjust padding as needed */
+  border-bottom: 2px solid var(--floral-white);
 }
 
-#links a{
+i {
+  color: var(--flame);
+}
+
+#links a {
   padding: 0px 5px;
 }
 
@@ -43,37 +50,77 @@ i{
 }
 
 #hero {
-    height: 90vh;
-    align-content: center;
+  /* background-image: url(images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(8px); */
+  height: 100vh;
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around
 }
 
 
-#herocontent{
-    background-image: ;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+#herocontent {
+  background-image: ;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-#herocontent img{
-    width: 100%;
+
+#herocontent img {
+  width: 100%;
 }
-#left{
-    justify-items: center;
+
+#left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Horizontal centering */
+  justify-content: center;
+  /* Vertical centering */
+  text-align: center;
 }
-#left h1{
-    font-size: xx-large;
-    font-weight: bolder;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: oblique;
-    color: var(--floral-white);
+
+#right {
+  width: 50%;
 }
-#left h2{
-    font-weight: bolder;
-    font-size: x-large;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: oblique;
-    color: var(--floral-white);
+
+#left h1 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: oblique;
+  color: var(--floral-white);
+}
+
+#left h2 {
+  font-weight: bolder;
+  font-size: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: oblique;
+  color: var(--floral-white);
+}
+
+#left a {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: var(--floral-white);
+  font-size: large;
+  text-decoration: none;
+}
+
+#left button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--flame);
+  margin: 30px;
+  border: solid 0px;
 }
 
 
@@ -82,7 +129,7 @@ i{
   #navbar {
 
     flex-direction: row;
-    align-items:center;
+    align-items: center;
     padding: 10px 10px;
   }
 
@@ -96,11 +143,19 @@ i{
     margin: 0.5rem 0;
   }
 
-  #herocontent{
+  #herocontent {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  #right{
-    margin: 10% ;
+
+  #right {
+    margin: 10%;
+    width: 80%;
+  }
+
+  #left {
+    width: 80%;
   }
 }
