@@ -30,7 +30,9 @@ i{
     color: var(--flame);
 }
 
-
+#links a{
+  padding: 0px 5px;
+}
 
 
 #navbar a {
