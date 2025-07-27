@@ -50,12 +50,7 @@ i {
 }
 
 #hero {
-  /* background-image: url(images/hero.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  backdrop-filter: blur(8px); */
-  height: 100vh;
+  height: 95vh;
   align-content: center;
   display: flex;
   flex-direction: row;
@@ -64,7 +59,7 @@ i {
 
 
 #herocontent {
-  background-image: ;
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -124,7 +119,26 @@ i {
   border: solid 0px;
 }
 
+#about {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  margin: 5%;
+  /* justify-content: center; */
+}
 
+#about img {
+  width: 90%;
+}
+
+#leftabout {
+  width: 45%;
+}
+
+#rightabout {
+  width: 45%;
+}
 
 @media (max-width: 768px) {
   #navbar {
@@ -158,5 +172,18 @@ i {
 
   #left {
     width: 80%;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #leftabout {
+    width: 90%;
+  }
+
+  #rightabout {
+    width: 90%;
   }
 }
