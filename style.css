@@ -25,6 +25,7 @@ body {
   background-color: var(--eerie-black);
   position: sticky;
   top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,6 +156,12 @@ i {
 
 #rightabout {
   width: 50%;
+}
+#footer{
+  padding: 10px;
+  background-color: black;
+  color: var(--flame);
+  text-align: center;
 }
 
 @media (max-width: 768px) {
