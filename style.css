@@ -154,7 +154,6 @@ ul {
 
 #about img:hover {
   filter: grayscale(0%);
-  border-radius: 5%;
 }
 
 #leftabout {
