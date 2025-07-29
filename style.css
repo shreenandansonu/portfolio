@@ -186,6 +186,8 @@ ul {
 #rightabout p{
   font-style: normal;
 }
+
+
 #footer {
   padding: 10px;
   background-color: black;
@@ -393,5 +395,86 @@ ul {
   #rightabout ul{
     padding-left: 20px;
     font-style: normal;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  #navbar {
+    padding: 15px 40px;
+  }
+
+  #navbar h1 {
+    font-size: 1.8rem;
+    padding: 12px;
+  }
+
+  #navbar h4 {
+    font-size: 1rem;
+  }
+
+  #hero {
+    padding-top: 40px;
+    height: 90vh;
+    gap: 30px;
+  }
+
+  #left,
+  #right {
+    width: 45%;
+  }
+
+  #left h1 {
+    font-size: 2.5rem;
+  }
+
+  #left h2 {
+    font-size: 2rem;
+  }
+
+  #left button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+  #about {
+    gap: 40px;
+    padding: 4% 8%;
+  }
+
+  #about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  #projects {
+    gap: 40px;
+    padding: 5% 8%;
+  }
+
+  #projectcard {
+    width: 30%;
+    margin-bottom: 30px;
+  }
+
+  #skills {
+    padding: 60px 40px;
+    gap: 30px;
+  }
+
+  #domain {
+    padding: 40px;
+  }
+
+  #headings {
+    font-size: 2.5rem;
+  }
+
+  #footer {
+    font-size: 0.9rem;
   }
 }
