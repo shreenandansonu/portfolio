@@ -35,9 +35,19 @@ body {
 }
 
 #navbar h1 {
+  font-family: 'Times New Roman', Times, serif;
   font-size: xx-large;
   font-weight: normal;
+  font-style: oblique;
+  font-weight: bolder;
+  background-color: var(--flame);
+  padding: 10px;
+  border-radius: 50%;
+  color: var(--floral-white);
 }
+/* #navbar h4 {
+color: var(--floral-white);
+} */
 
 i {
   color: var(--flame);
@@ -221,7 +231,7 @@ ul {
   font-family: 'Times New Roman', Times, serif;
   margin: 10px 0px;
   text-align: justify;
-  font-style: oblique;
+  font-style: normal;
 }
 
 #projectcard h3 {
@@ -268,9 +278,11 @@ ul {
   font-size: 1.5rem;
   font-style: normal;
 }
+
 #domain li {
+  list-style-type:none;
+  text-align: left;
   font-style: normal;
-  list-style-type:square;
 }
 
 #domain li:hover {
