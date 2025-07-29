@@ -139,6 +139,11 @@ i {
   margin: 30px;
   border: solid 0px;
 }
+#left button:hover{
+  background-color: var(--black-olive);
+
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
 
 #about {
   background-color: var(--eerie-black);
@@ -180,7 +185,11 @@ ul {
   color: var(--floral-white);
   
 }
-
+#social i:hover
+{
+  color: var(--eerie-black);
+  transition: color 0.1s ease;
+}
 #about img {
   width: 90%;
   filter: grayscale(100%);
