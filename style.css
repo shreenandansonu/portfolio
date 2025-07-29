@@ -70,7 +70,7 @@ i {
 }
 
 #hero {
-  height: 95vh;
+  height: 90vh;
   align-content: center;
   display: flex;
   flex-direction: row;
@@ -254,8 +254,16 @@ ul {
 
 #buttonproject {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;  
 
+}
+#Date{
+
+  color: rgb(192, 190, 187);
+  font-weight:bold;
+  font-style: italic;
 }
 
 #skills {
@@ -273,7 +281,7 @@ ul {
 #domain {
   width: 30%;
   margin: 10px;
-  border-radius: 15px 0px;
+  border-radius: 10px 10px;
   background-color: var(--eerie-black);
   padding: 5% 10%;
   color: var(--flame);
