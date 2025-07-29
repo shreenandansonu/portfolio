@@ -234,7 +234,33 @@ ul {
 
 }
 
+#skills{
+  background-color: var(--flame);
+  padding: 5%;
+  color: var(--floral-white);
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;  
+}
+#domain {
+  width: 30%;
+  border-radius: 15px 0px;
+  background-color: var(--eerie-black);
+  padding: 5% 10%;
+  color: var(--flame);
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+}
+
 @media (max-width: 768px) {
+  #domain {
+  width: 100%;
+}
+
   #projects {
     padding: 10% 5%;
     flex-direction: column;
