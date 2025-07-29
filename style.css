@@ -198,6 +198,7 @@ ul {
   padding: 5%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   overflow-wrap: normal;
   align-items: center;
   justify-content: space-between;
