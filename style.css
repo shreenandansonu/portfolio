@@ -34,10 +34,11 @@ body {
   border-bottom: 2px solid var(--floral-white);
 }
 
-#navbar h1{
+#navbar h1 {
   font-size: xx-large;
-  font-weight:normal;
+  font-weight: normal;
 }
+
 i {
   color: var(--flame);
 }
@@ -160,10 +161,17 @@ ul {
   width: 50%;
 }
 
+#reallystrong{
+  color: var(--flame);
+  font-weight: bolder;
+  font-style: normal;
+}
 #rightabout {
   width: 50%;
 }
-
+#rightabout p{
+  font-style: normal;
+}
 #footer {
   padding: 10px;
   background-color: black;
@@ -215,12 +223,14 @@ ul {
   text-align: justify;
   font-style: oblique;
 }
+
 #projectcard h3 {
 
   color: var(--eerie-black);
   font-weight: bolder;
 
 }
+
 #projectcard a {
   color: var(--floral-white);
   font-family: 'Oswald', sans-serif;
@@ -234,19 +244,21 @@ ul {
 
 }
 
-#skills{
+#skills {
   background-color: var(--flame);
-  padding: 5%;
+  padding: 20px;
   color: var(--floral-white);
   text-align: center;
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
-  display: flex; 
+  display: flex;
   flex-direction: row;
-  justify-content: center;  
+  justify-content: center;
 }
+
 #domain {
   width: 30%;
+  margin: 10px;
   border-radius: 15px 0px;
   background-color: var(--eerie-black);
   padding: 5% 10%;
@@ -254,12 +266,32 @@ ul {
   text-align: center;
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
+  font-style: normal;
+}
+#domain li {
+  font-style: normal;
+  list-style-type:square;
+}
+
+#domain li:hover {
+  color: var(--flame);
+  font-style: oblique;
 }
 
 @media (max-width: 768px) {
   #domain {
-  width: 100%;
-}
+    width: 100%;
+    margin: 10px 20px;
+    text-overflow: ellipsis;
+
+  }
+
+  #skills {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+
+  }
 
   #projects {
     padding: 10% 5%;
@@ -268,9 +300,10 @@ ul {
   }
 
   #projectcard {
-  width: 100%;
-  margin: 20px 0px;
+    width: 100%;
+    margin: 20px 0px;
   }
+
   #navbar {
 
     flex-direction: row;
@@ -324,5 +357,10 @@ ul {
   #rightabout {
     width: 100%;
     padding-top: 20px;
+  }
+
+  #rightabout ul{
+    padding-left: 20px;
+    font-style: normal;
   }
 }
