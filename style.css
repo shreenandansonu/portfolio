@@ -196,6 +196,7 @@ ul {
 }
 
 #projects {
+  background-color: var(--black-olive);
   margin: 0%;
   padding: 5%;
   display: flex;
