@@ -136,8 +136,9 @@ i {
   padding: 10px 20px;
   border-radius: 5px;
   background-color: var(--flame);
-  margin: 30px;
+  margin: 50px 10px;
   border: solid 0px;
+
 }
 #left button:hover{
   background-color: var(--black-olive);
