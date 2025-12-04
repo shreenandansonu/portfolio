@@ -140,7 +140,8 @@ i {
   border: solid 0px;
 
 }
-#left button:hover{
+
+#left button:hover {
   background-color: var(--black-olive);
 
   transition: background-color 0.1s ease, color 0.1s ease;
@@ -184,13 +185,14 @@ ul {
   font-size: 2.5rem;
   padding: 10px;
   color: var(--floral-white);
-  
+
 }
-#social i:hover
-{
+
+#social i:hover {
   color: var(--eerie-black);
   transition: color 0.1s ease;
 }
+
 #about img {
   width: 90%;
   filter: grayscale(100%);
@@ -563,4 +565,49 @@ ul {
   #footer {
     font-size: 0.9rem;
   }
+}
+
+.marquee-wrapper {
+  background: #fffcf2ff;
+  padding: 10px 0;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+marquee {
+  display: flex;
+  align-items: center;
+  /* Vertically center everything */
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  /* Vertical alignment for all children */
+  gap: 30px;
+  /* spacing between items */
+}
+
+.logo-item {
+  display: inline-block;
+  text-align: center;
+  margin: 0 15px;
+  /* space between logos */
+}
+
+.logo-item img {
+  width: 70px;
+  /* adjust as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.logo-name {
+  margin-top: 2px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
 }
