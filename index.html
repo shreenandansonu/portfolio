@@ -14,11 +14,11 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XSQDE7GX44"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-XSQDE7GX44');
+    gtag('config', 'G-XSQDE7GX44');
 </script>
 
 
@@ -94,15 +94,23 @@
         <div id="rightabout">
             <h2>About Me</h2>
             <p>
-                &emsp; &emsp; I’m <strong id="reallystrong">Shreenandan Sahu,</strong> a passionate engineer currently pursuing my M.Tech in Clinical Engineering. Driven by a desire to create innovative solutions that improve healthcare and enhance quality of life, I specialize in <strong id="reallystrong">Electronics, Coding, and Mechanical Design, </strong> with a strong interest in biomedical devices and assistive technologies.
+                &emsp; &emsp; I’m <strong id="reallystrong">Shreenandan Sahu,</strong> a passionate engineer currently
+                pursuing my M.Tech in Clinical Engineering. Driven by a desire to create innovative solutions that
+                improve healthcare and enhance quality of life, I specialize in <strong id="reallystrong">Electronics,
+                    Coding, and Mechanical Design, </strong> with a strong interest in biomedical devices and assistive
+                technologies.
 
             </p>
             <p>
-                &emsp; &emsp;I bring a solid foundation in electronics, programming, and biomedical engineering, which I have applied to several impactful projects. This personal portfolio website is a space to showcase my work and highlight my journey in the field.
+                &emsp; &emsp;I bring a solid foundation in electronics, programming, and biomedical engineering, which I
+                have applied to several impactful projects. This personal portfolio website is a space to showcase my
+                work and highlight my journey in the field.
 
             </p>
             <p>
-                 &emsp; &emsp;I also have a basic understanding of key medical device standards and regulations, including <strong id="reallystrong"> IEC 60601, ISO 13485, ISO 14971, and IEC 62304, </strong> and I am familiar with the overall process of medical device development, risk management, and validation.
+                &emsp; &emsp;I also have a basic understanding of key medical device standards and regulations,
+                including <strong id="reallystrong"> IEC 60601, ISO 13485, ISO 14971, and IEC 62304, </strong> and I am
+                familiar with the overall process of medical device development, risk management, and validation.
 
             </p>
 
@@ -132,26 +140,26 @@
     <div class="marquee-wrapper">
         <marquee behavior="scroll" direction="left" scrollamount="10">
             <div class="marquee-content">
-                            <b style="font-size: larger;">With Education and Experience from Institutes like </b>
-            <div class="logo-item">
-                <img src="images/logo1.png" alt="Logo 1">
-                <div class="logo-name">IIT Madras</div>
-            </div>
+                <b style="font-size: larger;">With Education and Experience from Institutes like </b>
+                <div class="logo-item">
+                    <img src="images/logo1.png" alt="Logo 1">
+                    <div class="logo-name">IIT Madras</div>
+                </div>
 
-            <div class="logo-item">
-                <img src="images/logo2.png" alt="Logo 2">
-                <div class="logo-name">NIT Rourkela</div>
-            </div>
+                <div class="logo-item">
+                    <img src="images/logo2.png" alt="Logo 2">
+                    <div class="logo-name">NIT Rourkela</div>
+                </div>
 
-            <div class="logo-item">
-                <img src="images/logo3.png" alt="Logo 3">
-                <div class="logo-name">SCTIMST Trivandrum</div>
-            </div>
+                <div class="logo-item">
+                    <img src="images/logo3.png" alt="Logo 3">
+                    <div class="logo-name">SCTIMST Trivandrum</div>
+                </div>
 
-            <div class="logo-item">
-                <img src="images/logo4.png" alt="Logo 4">
-                <div class="logo-name">CMC Vellore</div>
-            </div>
+                <div class="logo-item">
+                    <img src="images/logo4.png" alt="Logo 4">
+                    <div class="logo-name">CMC Vellore</div>
+                </div>
             </div>
         </marquee>
     </div>
@@ -355,14 +363,14 @@
                         Project</a></button>
             </div>
         </div>
-                <div id="projectcard">
+        <div id="projectcard">
             <img src="images/thubnail 11.png" alt="">
             <h3>Wether App Using API and Django</h3>
-            <p>In this project i use pyhton in Django as backend to call wether API and use the data to display th wether of a place using basic webdevelopment.</p>
+            <p>In this project i use pyhton in Django as backend to call wether API and use the data to display th
+                wether of a place using basic webdevelopment.</p>
             <div id="buttonproject">
                 <h4 id="Date">July 2023-Nov 2023</h4>
-                <button><a href="https://github.com/shreenandansonu/weatherdetector"
-                        target="_blank">View
+                <button><a href="https://github.com/shreenandansonu/weatherdetector" target="_blank">View
                         Project</a></button>
             </div>
         </div>
@@ -386,6 +394,17 @@
     <div id="footer">
 
         <p> Copyright (c) 2025 Shreenandan Sahu | #buildingforINDIA </p>
+            <p style="color: #403d39ff;">👀 Visitors: <span id="visits">0</span></p>
+        
+
+        <script>
+            fetch('https://api.countapi.xyz/hit/shreenandan-portfolio/visits')
+                .then(res => res.json())
+                .then(res => {
+                    document.getElementById('visits').innerText = res.value;
+                });
+        </script>
+
     </div>
 </body>
 
