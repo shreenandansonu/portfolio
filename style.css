@@ -615,3 +615,12 @@ marquee {
   font-size: 15px;
   font-weight: bold;
 }
+#pics{
+  background-color: var(--flame);
+
+}
+#picimg {
+  width: 350px;
+  margin: 10px 20px;
+}
+
