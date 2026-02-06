@@ -17,6 +17,7 @@
 body {
   font-family: 'Oswald', sans-serif;
   background-color: var(--black-olive);
+  /* background-image: url(images/grid.png); */
   color: var(--flame);
   font-size: 16px;
 }
@@ -72,6 +73,8 @@ i {
 
 #hero {
   background-color: var(--eerie-black);
+  background-image: url(images/grid.png);
+  background-size: contain;
   align-content: center;
   display: flex;
   flex-direction: row;
