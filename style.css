@@ -20,6 +20,8 @@ body {
   /* background-image: url(images/grid.png); */
   color: var(--flame);
   font-size: 16px;
+  cursor: url("images/cursor.png"), auto;
+
 }
 
 #navbar {
@@ -236,7 +238,7 @@ ul {
 
 #projects {
   background-color: var(--eerie-black);
-    background-image: url(images/grid.png);
+  background-image: url(images/grid.png);
   background-size: contain;
   margin: 0%;
   padding: 0px;
@@ -254,6 +256,9 @@ ul {
   padding: 50px 0px 1px 0px;
 
   background-color: var(--eerie-black);
+  /* background-image: url(images/grid.png);
+  background-size: contain; */
+
 }
 
 
@@ -395,7 +400,7 @@ ul {
   }
 
   #left button {
-  margin: 20px 10px 10px 10px ;
+    margin: 20px 10px 10px 10px;
   }
 
   #domain {
@@ -620,12 +625,13 @@ marquee {
   font-size: 15px;
   font-weight: bold;
 }
-#pics{
+
+#pics {
   background-color: var(--flame);
 
 }
+
 #picimg {
   width: 350px;
   margin: 10px 20px;
 }
-
