@@ -20,7 +20,6 @@ body {
   /* background-image: url(images/grid.png); */
   color: var(--flame);
   font-size: 16px;
-  cursor: url("images/cursor.png"), auto;
 
 }
 
