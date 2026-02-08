@@ -388,7 +388,8 @@ ul {
     margin: 0%;
     padding: 0%;
   }
-  head{
+
+  #hero {
     height: 100vh;
   }
 
