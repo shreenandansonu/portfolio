@@ -631,7 +631,35 @@ marquee {
 
 #pics {
   background-color: var(--flame);
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#pics h1{
+  color: var(--eerie-black);
+  padding-top: 15px;
 
+}
+
+#achievement{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border : solid var(--eerie-black);
+  border-radius: 10px;
+  background-color: var(--eerie-black);
+  margin: 20px;
+}
+#achievement h4{
+  color: var(--floral-white);
+  padding: 15px 0px;
+}
+.achipic{
+  height: 50vh;
+  border-radius: 7px;
 }
 
 #picimg {
