@@ -237,7 +237,7 @@ ul {
 
 #projects {
   background-color: var(--eerie-black);
-  background-image: url(images/grid.png);
+  /* background-image: url(images/grid.png); */
   background-size: contain;
   margin: 0%;
   padding: 0px;
