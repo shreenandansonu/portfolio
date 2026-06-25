@@ -678,8 +678,8 @@ marquee {
 
 /* ---------------- Highlights Section ---------------- */
 
-#highlights {
-    /* background-color: var(--eerie-black); */
+/* #highlights {
+
     width: 90%;
     max-width: 1200px;
     margin: 50px auto;
@@ -718,11 +718,11 @@ marquee {
     color: #555;
     font-weight: 500;
     margin: 0;
-}
+} */
 
 /* ---------------- Mobile ---------------- */
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
 
     #highlights {
         flex-direction: row;
@@ -730,7 +730,7 @@ marquee {
     }
 
     .highlightcard {
-        width: 40%;
+        width: 40;
     }
 
-}
+} */
