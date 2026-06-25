@@ -729,8 +729,8 @@ marquee {
         align-items: center;
     }
 
-    /* .highlightcard {
-        width: 100%;
-    } */
+    .highlightcard {
+        width: content;
+    }
 
 }
