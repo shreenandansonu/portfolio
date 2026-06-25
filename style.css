@@ -89,6 +89,7 @@ i {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 90%;
 }
 
 #herocontent img {
@@ -673,4 +674,64 @@ marquee {
 #picimg {
   width: 350px;
   margin: 10px 20px;
+}
+
+/* ---------------- Highlights Section ---------------- */
+
+#highlights {
+    /* background-color: var(--eerie-black); */
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.highlightcard {
+    flex: 1;
+    min-width: 180px;
+    background: var(--floral-white);
+    border-radius: 15px;
+    padding: 10px 10px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+    border: 1px solid #e6e6e6;
+}
+
+.highlightcard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.highlightcard h1 {
+    font-size: 2rem;
+    color: var(--flame);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.highlightcard p {
+    font-size: 1.25rem;
+    color: #555;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* ---------------- Mobile ---------------- */
+
+@media (max-width: 768px) {
+
+    #highlights {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .highlightcard {
+        width: 100%;
+        max-width: 350px;
+    }
+
 }
