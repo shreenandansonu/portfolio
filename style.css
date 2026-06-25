@@ -725,7 +725,7 @@ marquee {
 @media (max-width: 768px) {
 
     #highlights {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
