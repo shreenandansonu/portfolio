@@ -472,7 +472,7 @@ ul {
   }
 
   #left {
-    width: 80%;
+    width:95%;
   }
 
   #social i {
@@ -722,7 +722,7 @@ marquee {
 
 /* ---------------- Mobile ---------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
     #highlights {
         flex-direction: row;
@@ -731,7 +731,6 @@ marquee {
 
     .highlightcard {
         width: 100%;
-        max-width: 350px;
     }
 
 }
