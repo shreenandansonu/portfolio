@@ -638,99 +638,93 @@ marquee {
   font-weight: bold;
 }
 
+
 #pics {
-  background-color: var(--flame);
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-#pics h1{
-  color: var(--eerie-black);
-  padding-top: 15px;
-
+    background: var(--flame);
+    padding: 60px 0;
+    overflow: hidden;
 }
 
-#achievement{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  border : solid var(--eerie-black);
-  border-radius: 10px;
-  background-color: var(--eerie-black);
-  margin: 20px;
-}
-#achievement h4{
-  color: var(--floral-white);
-  padding: 15px 0px;
-}
-.achipic{
-  height: 50vh;
-  border-radius: 7px;
-}
-
-#picimg {
-  width: 350px;
-  margin: 10px 20px;
-}
-
-/* ---------------- Highlights Section ---------------- */
-
-/* #highlights {
-
-    width: 90%;
-    max-width: 1200px;
-    margin: 50px auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.highlightcard {
-    flex: 1;
-    min-width: 180px;
-    background: var(--floral-white);
-    border-radius: 15px;
-    padding: 10px 10px;
+.heading {
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    transition: 0.3s ease;
-    border: 1px solid #e6e6e6;
+    color: var(--eerie-black);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
 }
 
-.highlightcard:hover {
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+.marquee:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+.achievement {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    width: fit-content;
+}
+
+.achievement:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-.highlightcard h1 {
-    font-size: 1.5rem;
-    color: var(--flame);
-    margin-bottom: 10px;
-    font-weight: 700;
+.achipic {
+    /* height: 300px; */
+    height: 500px;
+    display: block;
 }
 
-.highlightcard p {
+.achievement h4 {
+    padding: 18px;
+    text-align: center;
+    color: #333;
     font-size: 1rem;
-    color: #555;
-    font-weight: 500;
-    margin: 0;
-} */
+    line-height: 1.5;
+}
 
-/* ---------------- Mobile ---------------- */
-
-/* @media (max-width: 900px) {
-
-    #highlights {
-        flex-direction: row;
-        align-items: center;
+@keyframes scroll {
+    from {
+        transform: translateX(0);
     }
 
-    .highlightcard {
-        width: 40;
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .achievement {
+        flex: 0 0 280px;
     }
 
-} */
+    .achipic {
+        height: 180px;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    .marquee-content {
+        animation-duration: 15s;
+    }
+}
+
