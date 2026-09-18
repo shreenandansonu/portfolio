@@ -224,45 +224,39 @@ img {
     margin-top: 8px;
 }
 
-/* CSS marquee — replaces deprecated <marquee> */
-.role-strip {
-    width: 100%;
-    overflow: hidden;
-    margin: 22px 0 8px;
-    padding: 8px 0;
-    border-top: 1px solid var(--glass-border);
-    border-bottom: 1px solid var(--glass-border);
-    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-}
 
-.role-strip-track {
+
+/* availability badge */
+.open-badge {
+    margin-top: 20px;
     display: inline-flex;
-    gap: 40px;
-    white-space: nowrap;
-    animation: marquee 16s linear infinite;
-}
-
-.role-strip-track span {
+    align-items: center;
+    gap: 8px;
     font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--timberwolf);
-    letter-spacing: 1.5px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 1px;
     text-transform: uppercase;
+    color: #7dcf8a;
+    background: rgba(46, 160, 67, 0.1);
+    border: 1px solid rgba(46, 160, 67, 0.45);
+    border-radius: 30px;
+    padding: 6px 13px;
+    box-shadow: 0 0 16px rgba(46, 160, 67, 0.15);
 }
 
-.role-strip-track span::before {
-    content: "// ";
-    color: var(--flame);
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2ea043;
+    box-shadow: 0 0 10px rgba(46, 160, 67, 0.9);
+    animation: pulse 2s ease-in-out infinite;
 }
 
-.role-strip:hover .role-strip-track {
-    animation-play-state: paused;
-}
-
-@keyframes marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.3; }
 }
 
 /* buttons */
@@ -805,6 +799,11 @@ section {
     padding: 10px 0;
     white-space: nowrap;
     animation: marquee 28s linear infinite;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
 }
 
 .marquee-track:hover .marquee-track-inner {
