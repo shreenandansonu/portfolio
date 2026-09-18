@@ -469,6 +469,40 @@
             </div>
         </section>
 
+        <!-- ================= CONTACT ================= -->
+        <section id="contact" aria-label="Contact">
+            <span class="sec-label center">06&nbsp;//&nbsp;Get In Touch</span>
+            <h2 class="sec-title center">Let's Build Something Together</h2>
+
+            <div class="contact-wrap">
+                <form class="contact-form" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="hidden-field">
+                        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                    </p>
+
+                    <div class="form-row">
+                        <label class="form-field">
+                            <span>Your name</span>
+                            <input type="text" name="name" placeholder="Jane Doe" required>
+                        </label>
+                        <label class="form-field">
+                            <span>Your email</span>
+                            <input type="email" name="email" placeholder="jane@example.com" required>
+                        </label>
+                    </div>
+
+                    <label class="form-field">
+                        <span>Message</span>
+                        <textarea name="message" rows="5" placeholder="Tell me about your project, idea, or role..." required></textarea>
+                    </label>
+
+                    <button type="submit" class="btn btn-solid contact-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    <p class="form-status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
     </main>
 
     <!-- ================= MOBILE BOTTOM NAV ================= -->
@@ -478,6 +512,7 @@
         <a href="#skills-section"><i class="fas fa-microchip"></i><span>Skills</span></a>
         <a href="#projects-section"><i class="fas fa-folder-open"></i><span>Projects</span></a>
         <a href="#awards"><i class="fas fa-trophy"></i><span>Awards</span></a>
+        <a href="#contact"><i class="fas fa-paper-plane"></i><span>Contact</span></a>
     </nav>
 
     <!-- ================= FOOTER ================= -->
@@ -508,6 +543,29 @@
                 });
             });
         });
+
+        // ============ Contact form (Netlify) ============
+        const contactForm = document.querySelector('#contact .contact-form');
+        const formStatus = document.querySelector('.form-status');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const data = new FormData(contactForm);
+                formStatus.textContent = 'Sending...';
+                formStatus.className = 'form-status';
+                fetch('/', { method: 'POST', headers: { 'Accept': 'application/json' }, body: data })
+                    .then((res) => {
+                        if (!res.ok) throw new Error('network');
+                        formStatus.textContent = 'Message sent — thanks for reaching out!';
+                        formStatus.className = 'form-status ok';
+                        contactForm.reset();
+                    })
+                    .catch(() => {
+                        formStatus.textContent = 'Couldn\'t send right now. Email me directly: shreenandansahu123@gmail.com';
+                        formStatus.className = 'form-status err';
+                    });
+            });
+        }
     </script>
 
 </body>

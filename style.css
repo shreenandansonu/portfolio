@@ -1110,6 +1110,117 @@ section {
     letter-spacing: 0.4px;
 }
 
+/* ================= CONTACT ================= */
+#contact {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact .sec-label,
+#contact .sec-title {
+    text-align: center;
+}
+
+.contact-form {
+    background: rgba(37, 36, 34, 0.45);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 40px 36px;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.hidden-field {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.form-field span {
+    font-family: var(--font-head);
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--timberwolf);
+}
+
+.form-field input,
+.form-field textarea {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--floral);
+    background: rgba(9, 9, 8, 0.65);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 12px 14px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: rgba(204, 197, 185, 0.3);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: var(--flame);
+    box-shadow: 0 0 14px rgba(235, 94, 40, 0.18);
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-submit {
+    width: 100%;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.form-status {
+    margin-top: 16px;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    min-height: 1.2em;
+}
+
+.form-status.ok {
+    color: #6fdd8b;
+}
+
+.form-status.err {
+    color: var(--flame);
+}
+
+@media (max-width: 640px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .contact-form {
+        padding: 28px 20px;
+    }
+}
+
 /* ================= MOBILE BOTTOM NAV ================= */
 #mobile-nav {
     position: fixed;
@@ -1118,7 +1229,7 @@ section {
     right: 0;
     z-index: 2000;
     display: none;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     align-items: center;
     background: rgba(14, 13, 12, 0.85);
     backdrop-filter: blur(16px);
