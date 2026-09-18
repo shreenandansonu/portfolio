@@ -420,6 +420,7 @@ img {
 /* anchor offset for sticky top navbar */
 #hero,
 #about,
+#timeline-section,
 #skills-section,
 #projects-section,
 #awards {
@@ -640,6 +641,146 @@ section {
     background: var(--flame);
     color: var(--bg-0);
     box-shadow: 0 6px 18px var(--accent-glow);
+}
+
+/* ================= CAREER TIMELINE ================= */
+#timeline-section {
+    max-width: 1280px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, transparent, var(--flame) 15%, var(--flame) 85%, transparent);
+    box-shadow: 0 0 12px var(--accent-soft);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 42px;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 34px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--flame);
+    border: 3px solid var(--bg-0);
+    box-shadow: 0 0 12px var(--accent-glow);
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -7px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -7px;
+}
+
+.timeline-card {
+    background: var(--bg-3);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    padding: 22px 26px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.timeline-card:hover {
+    border-color: rgba(235, 94, 40, 0.5);
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.4), 0 0 24px var(--accent-soft);
+    transform: translateY(-4px);
+}
+
+.timeline-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--flame);
+    background: var(--accent-soft);
+    border: 1px solid rgba(235, 94, 40, 0.3);
+    padding: 4px 12px;
+    border-radius: 30px;
+    margin-bottom: 12px;
+}
+
+.timeline-card h3 {
+    font-family: var(--font-head);
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.timeline-card p {
+    color: var(--timberwolf);
+    font-size: 0.95rem;
+}
+
+/* ================= PROJECT FILTERS ================= */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: -10px 0 34px;
+}
+
+.filter-btn {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--timberwolf);
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    padding: 9px 22px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+    color: var(--flame);
+    border-color: var(--flame);
+}
+
+.filter-btn.active {
+    color: var(--bg-0);
+    background: var(--flame);
+    border-color: var(--flame);
+    box-shadow: 0 6px 20px var(--accent-glow);
 }
 
 /* ================= LOGO MARQUEE ================= */
@@ -1127,6 +1268,26 @@ section {
 
     #rightabout {
         width: 100%;
+    }
+
+    /* timeline — single column, line on the left */
+    .timeline::before {
+        left: 16px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        left: 0;
+        text-align: left;
+        padding: 16px 0 16px 48px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 9px;
+        right: auto;
     }
 
     section {

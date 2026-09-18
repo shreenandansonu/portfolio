@@ -168,6 +168,41 @@
             </div>
         </section>
 
+        <!-- ================= CAREER TIMELINE ================= -->
+        <section id="timeline-section">
+            <span class="sec-label center">02&nbsp;//&nbsp;Career Timeline</span>
+            <h2 class="sec-title center">My Journey</h2>
+
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date"><i class="fas fa-briefcase"></i> Jul 2026 — Present</span>
+                        <h3>Graduate Engineer Trainee</h3>
+                        <p>Bayer AG R&amp;D &middot; Bengaluru</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date"><i class="fas fa-graduation-cap"></i> 2024 — 2026</span>
+                        <h3>M.Tech in Clinical Engineering</h3>
+                        <p>IIT Madras &middot; Chennai</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date"><i class="fas fa-graduation-cap"></i> 2020 — 2024</span>
+                        <h3>B.Tech in Biomedical Engineering</h3>
+                        <p>NIT Rourkela &middot; Rourkela</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ================= INSTITUTE LOGOS ================= -->
         <section class="marquee-section" aria-label="Institutes">
             <div class="marquee-track">
@@ -188,7 +223,7 @@
 
         <!-- ================= SKILLS ================= -->
         <section id="skills-section">
-            <span class="sec-label center">02&nbsp;//&nbsp;Domains &amp; Skills</span>
+            <span class="sec-label center">03&nbsp;//&nbsp;Domains &amp; Skills</span>
             <h2 class="sec-title center">Domains and Skills</h2>
 
             <div id="skills">
@@ -269,12 +304,19 @@
 
         <!-- ================= PROJECTS ================= -->
         <section id="projects-section">
-            <span class="sec-label center">03&nbsp;//&nbsp;Projects &amp; Experience</span>
+            <span class="sec-label center">04&nbsp;//&nbsp;Projects &amp; Experience</span>
             <h2 class="sec-title center">Projects and Experience</h2>
+
+            <div class="filter-bar" role="group" aria-label="Filter projects">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="embedded">Embedded</button>
+                <button class="filter-btn" data-filter="software">Software</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
 
             <div id="projects">
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-cat="embedded">
                     <a href="https://youtu.be/HOZUiPOotXk"><img src="images/thubnail 14.png" alt="FOOTZ bioimpedance analyzer"></a>
                     <h3>FOOTZ: smart bio impedance analyzer</h3>
                     <p>Developed a low-cost bioimpedance analyzer using ESP32 and AD5934 with multi-point impedance measurement, automatic calibration, and a Python-based software interface for real-time control, visualization, and analysis.</p>
@@ -284,7 +326,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-cat="embedded">
                     <a href="https://youtu.be/8x4jnvdGgfg"><img src="images/thubnail 1.png" alt="EKOBIT electronic stethoscope"></a>
                     <h3>EKOBIT: electronics stethoscope</h3>
                     <p>Designed and developed a low‐cost electronic stethoscope with dual‐microphone adaptive noise cancellation, analog front‐end (AFE) filtering, and Python‐based real‐time signal visualization for heart sound.</p>
@@ -294,7 +336,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-cat="embedded">
                     <a href="https://youtu.be/5ILCvA9i6UQ"><img src="images/thubnail 2.png" alt="COHMET ePEG board"></a>
                     <h3>COHMET: ePEG board for stroke rehab</h3>
                     <p>Designed and developed an ePEG board, a portable rehabilitation device integrating ATmega328P‐based custom PCB, Bluetooth communication, and real‐time response tracking via an Android app.</p>
@@ -304,7 +346,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-cat="embedded">
                     <a href="https://youtube.com/shorts/7qIoNEi0Ulo?feature=share"><img src="images/thubnail 4.png" alt="PBM therapy device"></a>
                     <h3>PBM Therapy Device for Depression</h3>
                     <p>Designed and developed a wearable medical device using ATmega328P on custom PCB for 830nm NIR light therapy. Integrated with app using HC-05. Validated on zebrafish model.</p>
@@ -314,7 +356,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-cat="design">
                     <a href="https://www.youtube.com/shorts/w_pJv9OohF4"><img src="images/thubnail 3.png" alt="VRNAV VR navigation device"></a>
                     <h3>VRNAV: hand held VR navigation device</h3>
                     <p>Built a Unity‐based mobile VR experience with an ATmega328P+HC-05 based universal handheld controller for navigating in the 3D space. Reconstruction of Konark sun temple of Odisha.</p>
@@ -324,7 +366,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-cat="embedded">
                     <img src="images/thubnail 13.png" alt="SAPSTUDIO music from plants">
                     <h3>SAPSTUDIO: Music from Plants</h3>
                     <p>Designed and developed a music generating device from plant, based on opensource project. This device captures signal from plants and converts it into MIDI notes.</p>
@@ -334,7 +376,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-cat="software">
                     <img src="images/thubnail 7.png" alt="Tkinter GUI development">
                     <h3>GUI development in python using Tkinter</h3>
                     <p>Developed multiple Tkinter based GUI for simple daily use apps like guessing games weather apps, pomodoro timer app etc. These incorporate the concepts of Classes and different components of Tkinter.</p>
@@ -344,7 +386,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-cat="embedded">
                     <img src="images/thubnail 5.png" alt="Cloud based ECG monitoring device">
                     <h3>Cloud Based ECG monitoring device</h3>
                     <p>Developed a mini project to use G Sheet as database and live broadcast ECG from patient using arduino and HC05 based circuit. Graph Updates every 2 second.</p>
@@ -354,7 +396,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-cat="embedded">
                     <a href="https://youtu.be/Cf5QEAOLr9A"><img src="images/thubnail 9.png" alt="PPG patient monitoring system"></a>
                     <h3>Patient Monitoring System for PPG</h3>
                     <p>Designed and developed an APP for visualizing and recording live PPG signal from ESP32 based patient monitoring system. Build using MIT App Inventor with functionalities like live, recording, alarm system and CSV file sharing.</p>
@@ -364,7 +406,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-cat="design">
                     <img src="images/thubnail 8.png" alt="Novel insulin storage device">
                     <h3>Novel Insulin Storage Device</h3>
                     <p>Conceptualised and designed novel device to store insulin at a cooler temperature. Passively Cooled using the Evaporation techniques using a composite coolant i.e. mixture of Alcohol and Water.</p>
@@ -374,7 +416,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-cat="design">
                     <img src="images/thubnail 6.png" alt="Rehabilitation lift">
                     <h3>Rehabilitation Lift for Parkinsonism</h3>
                     <p>Developed a novel rehabilitation concept for the upper body of Parkinsonism patients, utilizing mechanical principles involving gears and linear actuators to enable controlled front-back and side-to-side movements.</p>
@@ -384,7 +426,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-cat="software">
                     <img src="images/thubnail 11.png" alt="Weather app using Django">
                     <h3>Weather App Using API and Django</h3>
                     <p>In this project I use python in Django as backend to call weather API and use the data to display the weather of a place using basic webdevelopment.</p>
@@ -394,7 +436,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-cat="software">
                     <img src="images/thubnail 10.png" alt="Biomedical image processing">
                     <h3>Biomedical Image Processing</h3>
                     <p>Image processing lab works which include basic spatial as well as frequency domain image processing and image restoration and concepts like segmentation, edge detection and image registration. Done using MATLAB.</p>
@@ -409,7 +451,7 @@
 
         <!-- ================= AWARDS ================= -->
         <section id="awards" aria-label="Awards and certifications">
-            <span class="sec-label center light">04&nbsp;//&nbsp;Awards &amp; Certifications</span>
+            <span class="sec-label center light">05&nbsp;//&nbsp;Awards &amp; Certifications</span>
             <h2 class="sec-title center dark-text">Awards &amp; Certifications</h2>
 
             <div class="awards-marquee">
@@ -460,6 +502,19 @@
             });
         }, { threshold: 0.12 });
         document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        filterBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach((b) => b.classList.toggle('active', b === btn));
+                const f = btn.dataset.filter;
+                projectCards.forEach((card) => {
+                    const show = f === 'all' || card.dataset.cat === f;
+                    card.style.display = show ? '' : 'none';
+                });
+            });
+        });
     </script>
 
 </body>
