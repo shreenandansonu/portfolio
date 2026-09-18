@@ -444,27 +444,18 @@
 
         <!-- ================= AWARDS ================= -->
         <section id="awards" aria-label="Awards and certifications">
-            <span class="sec-label center light">05&nbsp;//&nbsp;Awards &amp; Certifications</span>
-            <h2 class="sec-title center dark-text">Awards &amp; Certifications</h2>
+            <span class="sec-label center">05&nbsp;//&nbsp;Awards &amp; Certifications</span>
+            <h2 class="sec-title center">Awards &amp; Certifications</h2>
 
-            <div class="awards-marquee">
-                <div class="awards-track">
-                    <div class="achievement">
-                        <img class="achipic" src="images/convocation.jpeg" alt="M.Tech Convocation">
-                        <h4>M.Tech Convocation from IIT Madras<br>17 July 2026</h4>
-                    </div>
-                    <div class="achievement">
-                        <img class="achipic" src="images/Acievement.jpg" alt="Design Registration">
-                        <h4>Design Registration for Clay-Based Insulin Storage Device</h4>
-                    </div>
-                    <div class="achievement">
-                        <img class="achipic" src="images/convocation.jpeg" alt="M.Tech Convocation">
-                        <h4>M.Tech Convocation from IIT Madras<br>17 July 2026</h4>
-                    </div>
-                    <div class="achievement">
-                        <img class="achipic" src="images/Acievement.jpg" alt="Design Registration">
-                        <h4>Design Registration for Clay-Based Insulin Storage Device</h4>
-                    </div>
+            <div class="awards-grid">
+                <div class="achievement">
+                    <img class="achipic" src="images/convocation.jpeg" alt="M.Tech Convocation">
+                    <h4>M.Tech Convocation from IIT Madras</h4>
+                    <span class="achievement-date">17 July 2026</span>
+                </div>
+                <div class="achievement">
+                    <img class="achipic" src="images/Acievement.jpg" alt="Design Registration">
+                    <h4>Design Registration for Clay-Based Insulin Storage Device</h4>
                 </div>
             </div>
         </section>
@@ -507,12 +498,24 @@
 
     <!-- ================= MOBILE BOTTOM NAV ================= -->
     <nav id="mobile-nav" aria-label="Mobile navigation">
+        <div id="mobile-nav-progress" aria-hidden="true"></div>
         <a href="#hero"><i class="fas fa-house"></i><span>Home</span></a>
         <a href="#about"><i class="fas fa-user"></i><span>About</span></a>
         <a href="#skills-section"><i class="fas fa-microchip"></i><span>Skills</span></a>
         <a href="#projects-section"><i class="fas fa-folder-open"></i><span>Projects</span></a>
         <a href="#awards"><i class="fas fa-trophy"></i><span>Awards</span></a>
         <a href="#contact"><i class="fas fa-paper-plane"></i><span>Contact</span></a>
+    </nav>
+
+    <!-- ================= DESKTOP SIDE NAV ================= -->
+    <nav id="side-nav" aria-label="Section navigation">
+        <div id="side-nav-progress" aria-hidden="true"></div>
+        <a href="#hero" data-label="Home"><i class="fas fa-house"></i></a>
+        <a href="#about" data-label="About"><i class="fas fa-user"></i></a>
+        <a href="#skills-section" data-label="Skills"><i class="fas fa-microchip"></i></a>
+        <a href="#projects-section" data-label="Projects"><i class="fas fa-folder-open"></i></a>
+        <a href="#awards" data-label="Awards"><i class="fas fa-trophy"></i></a>
+        <a href="#contact" data-label="Contact"><i class="fas fa-paper-plane"></i></a>
     </nav>
 
     <!-- ================= FOOTER ================= -->
@@ -543,6 +546,43 @@
                 });
             });
         });
+
+        // ============ Scroll spy + nav progress ============
+        const spyLinks = document.querySelectorAll('#mobile-nav a, #side-nav a');
+        const spySections = [];
+        const seenSpy = new Set();
+        spyLinks.forEach((link) => {
+            const sec = document.querySelector(link.getAttribute('href'));
+            if (sec && !seenSpy.has(sec.id)) {
+                seenSpy.add(sec.id);
+                spySections.push(sec);
+            }
+        });
+        let navTicking = false;
+
+        const updateNav = () => {
+            const docEl = document.documentElement;
+            const scrollTop = docEl.scrollTop || 0;
+            const max = docEl.scrollHeight - docEl.clientHeight;
+            docEl.style.setProperty('--nav-progress', (max > 0 ? (scrollTop / max) * 100 : 0) + '%');
+
+            let current = spySections[0];
+            spySections.forEach((sec) => {
+                if (sec.offsetTop - 120 <= scrollTop) current = sec;
+            });
+            spyLinks.forEach((link) => {
+                link.classList.toggle('active', link.getAttribute('href') === '#' + current.id);
+            });
+            navTicking = false;
+        };
+
+        window.addEventListener('scroll', () => {
+            if (!navTicking) {
+                navTicking = true;
+                requestAnimationFrame(updateNav);
+            }
+        }, { passive: true });
+        updateNav();
 
         // ============ Contact form (Netlify) ============
         const contactForm = document.querySelector('#contact .contact-form');
