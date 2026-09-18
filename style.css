@@ -349,8 +349,7 @@ img {
 
 .portrait-frame img {
     width: 100%;
-    filter: grayscale(60%) contrast(1.05);
-    transition: filter 0.4s ease, transform 0.4s ease;
+    transition: transform 0.4s ease;
 }
 
 .portrait-frame img:hover {
@@ -416,6 +415,15 @@ img {
     color: var(--flame);
     transform: translateY(-4px) scale(1.1);
     text-shadow: 0 0 14px var(--accent-glow);
+}
+
+/* anchor offset for sticky top navbar */
+#hero,
+#about,
+#skills-section,
+#projects-section,
+#awards {
+    scroll-margin-top: 70px;
 }
 
 /* ================= SECTION CHROME ================= */
@@ -960,6 +968,66 @@ section {
     font-size: 0.95rem;
     line-height: 1.5;
     letter-spacing: 0.4px;
+}
+
+/* ================= MOBILE BOTTOM NAV ================= */
+#mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    display: none;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    background: rgba(14, 13, 12, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(235, 94, 40, 0.35);
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.5);
+    padding: 4px 4px calc(4px + env(safe-area-inset-bottom));
+}
+
+#mobile-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 4px 4px;
+    color: var(--timberwolf);
+    font-family: var(--font-head);
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+#mobile-nav a i {
+    font-size: 0.95rem;
+    color: inherit;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+#mobile-nav a:hover,
+#mobile-nav a:active {
+    color: var(--flame);
+    transform: translateY(-2px);
+}
+
+#mobile-nav a:hover i,
+#mobile-nav a:active i {
+    color: var(--flame);
+    text-shadow: 0 0 12px var(--accent-glow);
+}
+
+@media (max-width: 900px) {
+    #mobile-nav {
+        display: grid;
+    }
+
+    body {
+        padding-bottom: 58px;
+    }
 }
 
 /* ================= FOOTER ================= */
